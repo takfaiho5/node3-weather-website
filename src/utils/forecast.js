@@ -10,7 +10,7 @@ const forecast = (lat, long , callback)  => {
             callback('No such place was found !' , undefined)
         }else{
             const currently = body.currently;
-            callback(undefined , `${body.daily.data[0].summary} It is currently ${currently.temperature} degrees out. There is a ${currently.windGust}% change of rain. `)
+            callback(undefined , `${body.daily.data[0].summary} It is currently ${currently.temperature} degrees out. This high Today is ${body.daily.data[0].temperatureHigh} with a low of ${body.daily.data[0].temperatureLow}. There is a ${currently.windGust}% change of rain. `)
         }
     })
 }
